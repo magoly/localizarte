@@ -1,0 +1,26 @@
+server:
+  port: 8090
+    
+spring:
+  datasource:
+    password: password
+    username: sa
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:/Users/cesaralvarez/Documents/db/localizarte;DB_CLOSE_ON_EXIT=FALSE;IFEXISTS=TRUE;DB_CLOSE_DELAY=-1;
+  h2: 
+    console:
+      enabled: true
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  jackson:
+    default-property-inclusion: NON_NULL
+
+
+netty:
+  port: 10002
+  host: 0.0.0.0
+  
